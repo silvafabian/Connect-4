@@ -47,6 +47,13 @@ themeBtn.addEventListener('click', themeClick)
 soundBtn.addEventListener('click', soundClick)
 
 /*-------------------------------- Functions --------------------------------*/
+init()
+
+function init() {
+  board = 
+    [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    console.log(board.length);
+}
 
 function clickBoard(evt) {
   console.log(evt.target.id)
