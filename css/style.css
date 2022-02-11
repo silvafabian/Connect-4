@@ -25,8 +25,25 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  font-size: 3.4rem;
+  padding-top: 10vh;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.board {
+  border: 10px solid blue;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(6, 10vmin);
+  grid-template-columns: repeat(7, 10vmin);
+  grid-gap: 0vmin;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 3px solid blue;
+  vertical-align: middle;
 }
