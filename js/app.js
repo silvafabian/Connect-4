@@ -52,7 +52,16 @@ init()
 function init() {
   board = 
     [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-    console.log(board.length);
+    // console.log(board.length);
+  turn = 1
+  winner = null
+  numOfTurns = 0
+  message.textContent = 'Press the Play button to get started!'
+  render()
+}
+
+function render() {
+  console.log('this is render')
 }
 
 function clickBoard(evt) {
