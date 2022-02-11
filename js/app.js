@@ -15,21 +15,55 @@ winningCombos = [
 
 
 /*-------------------------------- Variables --------------------------------*/
+
 let board, turn, winner, numOfTurns
 
 
 /*------------------------ Cached Element References ------------------------*/
+
 const boardArr = document.querySelectorAll(".circle")
 // console.log(boardArr)
 const message = document.querySelector(".message")
 // console.log(message)
 const resetBtn = document.getElementById("reset")
 // console.log(resetBtn)
-
+const playBtn = document.getElementById("play")
+// console.log(playBtn)
+const themeBtn = document.getElementById("theme")
+// console.log(themeBtn)
+const soundBtn = document.getElementById("sound")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
 
+resetBtn.addEventListener('click', resetClick)
+
+playBtn.addEventListener('click', playClick)
+
+themeBtn.addEventListener('click', themeClick)
+
+soundBtn.addEventListener('click', soundClick)
 
 /*-------------------------------- Functions --------------------------------*/
+
+function clickBoard(evt) {
+  console.log(evt.target.id)
+}
+
+function resetClick(evt) {
+  console.log(evt.target.id)
+}
+
+function playClick(evt) {
+  console.log(evt.target.id)
+}
+
+function themeClick(evt) {
+  console.log(evt.target.id)
+}
+
+function soundClick(evt) {
+  console.log(evt.target.id)
+}
