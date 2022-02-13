@@ -134,20 +134,20 @@ function getWinner() {
     const d = winningCombos[i][3]
   
     if(board[a] +board[b] + board[c] + board[d]=== 4){
-      message.textContent = "X Wins!!!"
+      message.textContent = "Player 1 wins!!!"
       winner = 'X'
       confetti.start(3000)
       // endGame()
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
-      message.textContent = 'O Wins!!!'
+      message.textContent = "Player 2 wins!!!"
       winner = 'O'
       confetti.start(3000)
     }
   } 
 
-  if (numOfTurns === 9 && winner === null){
-    message.textContent = "It's a tie"
+  if (numOfTurns === 42 && winner === null){
+    message.textContent = "How do you tie in connect 4!?!?"
     winner = 'T'
   }
 }
