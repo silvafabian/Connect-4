@@ -11,26 +11,26 @@ winningCombos = [
   [1, 2, 3, 4], [2, 3, 4, 5], [7, 14, 21, 28], [8, 15, 22, 29], [9, 16, 23, 30], 
   [10, 17, 24, 31], [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ]
-// console.log(winningCombos.length)
+
 
 
 /*-------------------------------- Variables --------------------------------*/
 
-let board, turn, winner, numOfTurns
+let board, turn, winner, numOfTurns, playing
 
 
 /*------------------------ Cached Element References ------------------------*/
 
 const boardArr = document.querySelectorAll(".circle")
-// console.log(boardArr)
+
 const message = document.querySelector(".message")
-// console.log(message)
+
 const resetBtn = document.getElementById("reset")
-// console.log(resetBtn)
+
 const playBtn = document.getElementById("play")
-// console.log(playBtn)
+
 const themeBtn = document.getElementById("theme")
-// console.log(themeBtn)
+
 const soundBtn = document.getElementById("sound")
 
 
@@ -38,21 +38,21 @@ const soundBtn = document.getElementById("sound")
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
 
-resetBtn.addEventListener('click', resetClick)
+resetBtn.addEventListener('click', reset)
 
-playBtn.addEventListener('click', playClick)
+playBtn.addEventListener('click', play)
 
-themeBtn.addEventListener('click', themeClick)
+themeBtn.addEventListener('click', theme)
 
-soundBtn.addEventListener('click', soundClick)
+soundBtn.addEventListener('click', sound)
 
-/*-------------------------------- Functions --------------------------------*/
+/*-------------------------------- Functions--------------------------------*/
 init()
 
 function init() {
   board = 
     [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-    // console.log(board.length);
+
   turn = 1
   winner = null
   numOfTurns = 0
@@ -61,69 +61,68 @@ function init() {
 }
 
 function render() {
+  changeColorOnBoard()
+}
+
+function changeColorOnBoard() {
 
   board.forEach((circle, idx) => {
-    if (circle ===1){
-      boardArr[idx].textContent = 'RED'
-      boardArr[idx].style.backgroundColor = 'red'
+    if (circle === 1){
+      boardArr[idx].textContent = 'Yellow'
+      boardArr[idx].style.backgroundColor = 'yellow'
     }
     else if (circle === -1) {
-      boardArr[idx].textContent = 'YELLOW'
-      boardArr[idx].style.backgroundColor = 'yellow'
+      boardArr[idx].textContent = 'red'
+      boardArr[idx].style.backgroundColor = 'red'
     }
     else {
       boardArr[idx].textContent = ''
       boardArr[idx].style.backgroundColor = 'white'
     }
   })
-  // console.log('this is render')
 }
 
 function clickBoard(evt) {
   let idxCircle = parseInt(evt.target.id.slice(3))
-  // console.log(idxCircle, 'this is idx of circle')
 
   if (winner) {
     return
   }
   
   turn *= -1
-  // console.log(turn, 'this is player turn');
 
   checkTurn()
 
   numOfTurns += 1
-  // console.log(numOfTurns, 'this is num of turns');
 
   board[idxCircle] = turn
-  // console.log(board[idxCircle], 'this is board idx Circle');
-  // console.log(evt.target.id)
+  
   render()
   getWinner()
 }
 
-function resetClick(evt) {
+function reset(evt) {
   console.log(evt.target.id)
 }
 
-function playClick(evt) {
+function play(evt) {
   console.log(evt.target.id)
 }
 
-function themeClick(evt) {
+function theme(evt) {
   console.log(evt.target.id)
 }
 
-function soundClick(evt) {
+function sound(evt) {
   console.log(evt.target.id)
 }
 
 function checkTurn () {
   if (turn === 1) { 
-    message.textContent = "Player 2 is up!"
+    message.textContent = "Player 1 is up!"
   } 
   else if (turn === -1) {
-    message.textContent = "Player 1 is up!"
+    message.textContent = "Player 2 is up!"
   } 
 }
 
@@ -138,7 +137,7 @@ function getWinner() {
       message.textContent = "Player 1 wins!!!"
       winner = 'X'
       confetti.start(3000)
-      // endGame()
+      
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
       message.textContent = "Player 2 wins!!!"
