@@ -61,7 +61,21 @@ function init() {
 }
 
 function render() {
-  console.log('this is render')
+  board.forEach((circle, idx) => {
+    if (circle ===1){
+      boardArr[idx].textContent = 'RED'
+      boardArr[idx].style.backgroundColor = 'red'
+    }
+    else if (circle === -1) {
+      boardArr[idx].textContent = 'YELLOW'
+      boardArr[idx].style.backgroundColor = 'yellow'
+    }
+    else {
+      boardArr[idx].textContent = ''
+      boardArr[idx].style.backgroundColor = 'white'
+    }
+  })
+  // console.log('this is render')
 }
 
 function clickBoard(evt) {
