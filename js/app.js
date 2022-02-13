@@ -61,6 +61,7 @@ function init() {
 }
 
 function render() {
+
   board.forEach((circle, idx) => {
     if (circle ===1){
       boardArr[idx].textContent = 'RED'
@@ -97,7 +98,7 @@ function clickBoard(evt) {
   board[idxCircle] = turn
   // console.log(board[idxCircle], 'this is board idx Circle');
   // console.log(evt.target.id)
-
+  render()
   getWinner()
 }
 
