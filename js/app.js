@@ -89,7 +89,7 @@ function clickBoard(evt) {
   turn *= -1
   // console.log(turn, 'this is player turn');
 
-  // checkTurn()
+  checkTurn()
 
   numOfTurns += 1
   // console.log(numOfTurns, 'this is num of turns');
@@ -113,4 +113,13 @@ function themeClick(evt) {
 
 function soundClick(evt) {
   console.log(evt.target.id)
+}
+
+function checkTurn () {
+  if (turn === 1) { 
+    message.textContent = "Player 2 is up!"
+  } 
+  else if (turn === -1) {
+    message.textContent = "Player 1 is up!"
+  } 
 }
