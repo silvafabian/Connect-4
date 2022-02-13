@@ -97,6 +97,8 @@ function clickBoard(evt) {
   board[idxCircle] = turn
   // console.log(board[idxCircle], 'this is board idx Circle');
   // console.log(evt.target.id)
+
+  getWinner()
 }
 
 function resetClick(evt) {
@@ -123,3 +125,4 @@ function checkTurn () {
     message.textContent = "Player 1 is up!"
   } 
 }
+
