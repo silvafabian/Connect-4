@@ -79,7 +79,24 @@ function render() {
 }
 
 function clickBoard(evt) {
-  console.log(evt.target.id)
+  let idxCircle = parseInt(evt.target.id.slice(3))
+  // console.log(idxCircle, 'this is idx of circle')
+
+  if (winner) {
+    return
+  }
+  
+  turn *= -1
+  // console.log(turn, 'this is player turn');
+
+  // checkTurn()
+
+  numOfTurns += 1
+  // console.log(numOfTurns, 'this is num of turns');
+
+  board[idxCircle] = turn
+  // console.log(board[idxCircle], 'this is board idx Circle');
+  // console.log(evt.target.id)
 }
 
 function resetClick(evt) {
