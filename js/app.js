@@ -126,3 +126,28 @@ function checkTurn () {
   } 
 }
 
+function getWinner() {
+  for (let i = 0; i < winningCombos.length; i++){
+    const a = winningCombos[i][0]
+    const b = winningCombos[i][1]
+    const c = winningCombos[i][2]
+    const d = winningCombos[i][3]
+  
+    if(board[a] +board[b] + board[c] + board[d]=== 4){
+      message.textContent = "X Wins!!!"
+      winner = 'X'
+      confetti.start(3000)
+      // endGame()
+    }
+    else if (board[a] +board[b] + board[c] + board[d]=== -4){
+      message.textContent = 'O Wins!!!'
+      winner = 'O'
+      confetti.start(3000)
+    }
+  } 
+
+  if (numOfTurns === 9 && winner === null){
+    message.textContent = "It's a tie"
+    winner = 'T'
+  }
+}
