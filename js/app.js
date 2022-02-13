@@ -56,7 +56,9 @@ function init() {
   turn = 1
   winner = null
   numOfTurns = 0
+  playing = false
   message.textContent = 'Press the Play button to get started!'
+  play()
   render()
 }
 
@@ -101,20 +103,20 @@ function clickBoard(evt) {
   getWinner()
 }
 
-function reset(evt) {
-  console.log(evt.target.id)
+function reset() {
+  
 }
 
-function play(evt) {
-  console.log(evt.target.id)
+function play() {
+
 }
 
-function theme(evt) {
-  console.log(evt.target.id)
+function theme() {
+  
 }
 
-function sound(evt) {
-  console.log(evt.target.id)
+function sound() {
+  
 }
 
 function checkTurn () {
@@ -135,13 +137,13 @@ function getWinner() {
   
     if(board[a] +board[b] + board[c] + board[d]=== 4){
       message.textContent = "Player 1 wins!!!"
-      winner = 'X'
+      winner = 'R'
       confetti.start(3000)
       
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
       message.textContent = "Player 2 wins!!!"
-      winner = 'O'
+      winner = 'Y'
       confetti.start(3000)
     }
   } 
