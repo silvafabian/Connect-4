@@ -36,7 +36,6 @@ const soundBtn = document.getElementById("sound")
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
 
-
 resetBtn.addEventListener('click', reset)
 
 playBtn.addEventListener('click', play)
@@ -58,6 +57,7 @@ function init() {
   playing = false
   message.textContent = 'Press the Play button to get started!'
   
+  // play()
   render()
 }
 
@@ -86,23 +86,6 @@ function clickBoard(evt) {
 
   render()
   getWinner()
-}
-
-function reset() {
-  resetBtn.hidden = true
-  init()
-}
-
-function play() {
-
-}
-
-function theme() {
-  
-}
-
-function sound() {
-  
 }
 
 function changeColorOnBoard() {
@@ -166,4 +149,30 @@ function getWinner() {
     message.textContent = "How do you tie in connect 4!?!?"
     winner = 'T'
   }
+}
+
+function reset() {
+  resetBtn.hidden = true
+  init()
+}
+
+function play() {
+  // when the button is hit, i want two thing to happen
+    // the message needs to change so that player 1 is up first
+    
+    // the init function needs to be called 
+    
+  // once there is a game in progress
+    // i need to hide the play button so it is not clicked again 
+    // the reset function will bring back the play button
+  
+
+}
+
+function theme() {
+  
+}
+
+function sound() {
+  
 }
