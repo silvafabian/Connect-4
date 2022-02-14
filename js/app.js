@@ -139,7 +139,6 @@ function getWinner() {
       message.textContent = "Player 1 wins!!!"
       winner = 'R'
       confetti.start(3000)
-      
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
       message.textContent = "Player 2 wins!!!"
