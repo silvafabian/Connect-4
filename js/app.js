@@ -67,10 +67,8 @@ function render() {
 
 function clickBoard(evt) {
   let idxCircle = parseInt(evt.target.id.slice(3))
-  console.log(idxCircle, 'this is idx circle');
 
   const actualIdx = choiceToBottom(idxCircle)
-  console.log(actualIdx, 'this is actual idx');
 
   if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
     return
@@ -123,6 +121,10 @@ function changeColorOnBoard() {
 }
 
 // this function takes the user choice, loops through it, and then places it at the most low part of of the function.
+// it adds 35 to the index to reach the bottom row
+// as long as 1 is between 0 and 41 inclusive (the number of circles on the board)
+// it then subtracts 7 to get to the row right above it, all in the same vertical column
+// if the index value of the board is null, it return the value and then colors it according to the turn
 function choiceToBottom(idx) {
   for (let i = idx + 35; i <= 41 && i >= 0; i -= 7) {
     if (board[i] === null) {
