@@ -12,15 +12,6 @@ const winningCombos = [
   [10, 17, 24, 31], [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ]
 
-const columns = [
-  [35, 28, 21, 14, 7, 0],
-  [36, 29, 22, 15, 8, 1],
-  [37, 30, 23, 16, 9, 2],
-  [38, 31, 24, 17, 10, 3],
-  [39, 32, 25, 18, 11, 4],
-  [40, 33, 26, 19, 12, 5],
-  [41, 34, 27, 20, 13, 6]
-]
 /*-------------------------------- Variables --------------------------------*/
 
 let board, turn, winner, numOfTurns
@@ -44,7 +35,7 @@ const soundBtn = document.getElementById("sound")
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
-// console.log(boardArr)
+
 
 resetBtn.addEventListener('click', reset)
 
@@ -66,22 +57,24 @@ function init() {
   numOfTurns = 0
   playing = false
   message.textContent = 'Press the Play button to get started!'
-  // play()
+  
   render()
 }
 
 function render() {
-
   changeColorOnBoard() 
 }
 
 function clickBoard(evt) {
   let idxCircle = parseInt(evt.target.id.slice(3))
+  console.log(idxCircle, 'this is idx circle');
+
+  const actualIdx = choiceToBottom(idxCircle)
+  console.log(actualIdx, 'this is actual idx');
 
   if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
     return
   }
-  console.log(idxCircle);
   
   turn *= -1
 
@@ -89,14 +82,16 @@ function clickBoard(evt) {
 
   numOfTurns += 1
 
-  board[idxCircle] = turn
+  board[actualIdx] = turn
   
-  choiceToBottom()
+  resetBtn.removeAttribute('hidden')
+
   render()
   getWinner()
 }
 
 function reset() {
+  resetBtn.hidden = true
   init()
 }
 
@@ -116,23 +111,26 @@ function changeColorOnBoard() {
 
   board.forEach((circle, idx) => {
     if (circle === 1){
-      boardArr[idx].textContent = 'Y'
       boardArr[idx].style.backgroundColor = 'yellow'
     }
     else if (circle === -1) {
-      boardArr[idx].textContent = 'red'
       boardArr[idx].style.backgroundColor = 'red'
     }
     else {
-      boardArr[idx].textContent = ''
       boardArr[idx].style.backgroundColor = 'white'
     }
   })
 }
 
-function choiceToBottom() {
-  
+
+function choiceToBottom(idx) {
+  for (let i = idx + 35; i <= 41 && i >= 0; i -= 7) {
+    if (board[i] === null) {
+      return i
+    }
+  }
 }
+
 
 function checkTurn () {
   if (turn === 1) { 
