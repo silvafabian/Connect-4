@@ -122,7 +122,7 @@ function changeColorOnBoard() {
   })
 }
 
-
+// this function takes the user choice, loops through it, and then places it at the most low part of of the function.
 function choiceToBottom(idx) {
   for (let i = idx + 35; i <= 41 && i >= 0; i -= 7) {
     if (board[i] === null) {
