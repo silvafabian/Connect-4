@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-winningCombos = [
+const winningCombos = [
   [0, 1, 2, 3], [3, 4, 5, 6], [7, 8, 9, 10], [10, 11, 12, 13], [14, 15, 16, 17], 
   [17, 18, 19, 20], [21, 22, 23, 24], [24, 25, 26, 27], [28, 29, 30, 31], [31, 32, 33, 34], [35, 36, 37, 38], [38, 39, 40, 41], [0, 7, 14, 21], [1, 8, 15, 22], [2, 9, 16, 23], 
   [3, 10, 17, 24], [4, 11, 18, 25], [5, 12, 19, 26], [6, 13, 20, 27], [14, 21, 28, 35], 
@@ -12,8 +12,15 @@ winningCombos = [
   [10, 17, 24, 31], [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ]
 
-
-
+const columns = [
+  [35, 28, 21, 14, 7, 0],
+  [36, 29, 22, 15, 8, 1],
+  [37, 30, 23, 16, 9, 2],
+  [38, 31, 24, 17, 10, 3],
+  [39, 32, 25, 18, 11, 4],
+  [40, 33, 26, 19, 12, 5],
+  [41, 34, 27, 20, 13, 6]
+]
 /*-------------------------------- Variables --------------------------------*/
 
 let board, turn, winner, numOfTurns
@@ -21,7 +28,7 @@ let board, turn, winner, numOfTurns
 
 /*------------------------ Cached Element References ------------------------*/
 
-const boardArr = document.querySelectorAll(".circle")
+const boardArr =document.querySelectorAll(".circle")
 
 const message = document.querySelector(".message")
 
@@ -37,6 +44,7 @@ const soundBtn = document.getElementById("sound")
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
+// console.log(boardArr)
 
 resetBtn.addEventListener('click', reset)
 
@@ -63,7 +71,45 @@ function init() {
 }
 
 function render() {
-  changeColorOnBoard()
+
+  changeColorOnBoard() 
+}
+
+function clickBoard(evt) {
+  let idxCircle = parseInt(evt.target.id.slice(3))
+
+  if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
+    return
+  }
+  console.log(idxCircle);
+  
+  turn *= -1
+
+  checkTurn()
+
+  numOfTurns += 1
+
+  board[idxCircle] = turn
+  
+  choiceToBottom()
+  render()
+  getWinner()
+}
+
+function reset() {
+  init()
+}
+
+function play() {
+
+}
+
+function theme() {
+  
+}
+
+function sound() {
+  
 }
 
 function changeColorOnBoard() {
@@ -84,39 +130,7 @@ function changeColorOnBoard() {
   })
 }
 
-function clickBoard(evt) {
-  let idxCircle = parseInt(evt.target.id.slice(3))
-
-  if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
-    return
-  }
-  console.log(idxCircle);
-  
-  turn *= -1
-
-  checkTurn()
-
-  numOfTurns += 1
-
-  board[idxCircle] = turn
-  
-  render()
-  getWinner()
-}
-
-function reset() {
-  
-}
-
-function play() {
-
-}
-
-function theme() {
-  
-}
-
-function sound() {
+function choiceToBottom() {
   
 }
 
