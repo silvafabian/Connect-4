@@ -16,7 +16,7 @@ winningCombos = [
 
 /*-------------------------------- Variables --------------------------------*/
 
-let board, turn, winner, numOfTurns, playing
+let board, turn, winner, numOfTurns
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -58,7 +58,7 @@ function init() {
   numOfTurns = 0
   playing = false
   message.textContent = 'Press the Play button to get started!'
-  play()
+  // play()
   render()
 }
 
@@ -70,7 +70,7 @@ function changeColorOnBoard() {
 
   board.forEach((circle, idx) => {
     if (circle === 1){
-      boardArr[idx].textContent = 'Yellow'
+      boardArr[idx].textContent = 'Y'
       boardArr[idx].style.backgroundColor = 'yellow'
     }
     else if (circle === -1) {
@@ -87,9 +87,10 @@ function changeColorOnBoard() {
 function clickBoard(evt) {
   let idxCircle = parseInt(evt.target.id.slice(3))
 
-  if (winner) {
+  if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
     return
   }
+  console.log(idxCircle);
   
   turn *= -1
 
