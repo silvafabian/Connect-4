@@ -49,7 +49,15 @@ init()
 
 function init() {
   board = 
-    [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    [
+      null, null, null, null, null, null, null, 
+      null, null, null, null, null, null, null, 
+      null, null, null, null, null, null, null, 
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null, 
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+    ]
 
   turn = 1
   winner = null
@@ -109,7 +117,7 @@ function changeColorOnBoard() {
 // it then subtracts 7 to get to the row right above it, all in the same vertical column
 // if the index value of the board is null, it return the value and then colors it according to the turn
 function choiceToBottom(idx) {
-  for (let i = idx + 35; i <= 41 && i >= 0; i -= 7) {
+  for (let i = idx + 42; i <= 48 && i >= 0; i -= 7) {
     if (board[i] === null) {
       return i
     }
