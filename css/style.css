@@ -33,6 +33,12 @@ body {
   align-items: center;
 }
 
+.btn {
+  font-size: 2.4rem;
+  width: auto;
+  height: auto;
+}
+
 .board {
   background-color: blue;
   border: 9px solid blue;
@@ -50,10 +56,12 @@ body {
   vertical-align: middle;
 }
 
-/* .board:nth-child(1){
-  background-color: transparent;
-} */
+.dont-click {
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
-/* .click {
-  background-color: transparent;
-} */
+#top-row {
+  grid-template-rows: repeat(1, 10vmin);
+  grid-template-columns: repeat(7, 10vmin);
+}
