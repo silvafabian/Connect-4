@@ -50,8 +50,10 @@ body {
   vertical-align: middle;
 }
 
-
-/* @media only screen and (min-width: 768px) {
-  
+/* .board:nth-child(1){
+  background-color: transparent;
 } */
 
+/* .click {
+  background-color: transparent;
+} */

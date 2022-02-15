@@ -45,7 +45,7 @@ themeBtn.addEventListener('click', theme)
 soundBtn.addEventListener('click', sound)
 
 /*-------------------------------- Functions--------------------------------*/
-init()
+// init()
 
 function init() {
   board = 
@@ -64,7 +64,7 @@ function init() {
   numOfTurns = 0
   playing = false
   message.textContent = 'Press the Play button to get started!'
-  
+  playBtn.hidden = true
   // play()
   render()
 }
@@ -161,10 +161,14 @@ function getWinner() {
 
 function reset() {
   resetBtn.hidden = true
+  // playBtn.hidden = false
   init()
 }
 
 function play() {
+  init()
+  message.textContent = "Player 1 goes first"
+  
   // when the button is hit, i want two thing to happen
     // the message needs to change so that player 1 is up first
     
