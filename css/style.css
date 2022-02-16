@@ -18,8 +18,10 @@ html {
 }
 
 body {
-  background: rgb(138,62,203); 
-  background: linear-gradient(228deg, rgba(138,62,203,1) 0%, rgba(254,181,1,1) 50%, rgba(92,229,231,1) 100%);
+  background-image: url(../assets/game-background.jpg);
+  background-size: cover;
+  /* background: rgb(138,62,203); 
+  background: linear-gradient(228deg, rgba(138,62,203,1) 0%, rgba(254,181,1,1) 50%, rgba(92,229,231,1) 100%); */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
@@ -31,6 +33,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  color: whitesmoke;
 }
 
 .btn {

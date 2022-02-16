@@ -40,11 +40,11 @@ const resetBtn = document.getElementById("reset")
 
 const playBtn = document.getElementById("play")
 
-const lightDarkBtn = document.getElementById("light-dark-mode")
+// const lightDarkBtn = document.getElementById("light-dark-mode")
 
 const soundBtn = document.getElementById("sound")
 
-const body = document.querySelector("body")
+// const body = document.querySelector("body")
 
 // const topRow = document.querySelectorAll('.click')
 
@@ -91,7 +91,7 @@ function init() {
 
 function render() {
   changeColorOnBoard() 
-  colorOnMouseOver()
+  // colorOnMouseOver()
   // colorOnMouseLeave()
 }
 
@@ -200,25 +200,25 @@ function play() {
   message.textContent = "Player 1 🔴 is up!"
 }
 
-function lightDark() {
-  body.className = body.className === "dark" ? "" : "dark"
-  // console.log(lightDarkBtn);
-}
+// function lightDark() {
+//   body.className = body.className === "dark" ? "" : "dark"
+//   // console.log(lightDarkBtn);
+// }
 
-function checkDarkPref() {
-  if (
-    window.matchMedia("(prefers-color-scheme:dark)").matches &&
-    body.className !== "dark"
-  ) {
-    lightDark()
-  }
-}
+// function checkDarkPref() {
+//   if (
+//     window.matchMedia("(prefers-color-scheme:dark)").matches &&
+//     body.className !== "dark"
+//   ) {
+//     lightDark()
+//   }
+// }
 
-checkDarkPref()
+// checkDarkPref()
 
-function sound() {
+// function sound() {
   
-}
+// }
 
 // function colorOnMouseOver(evt) {
 //   console.log(evt.target.style.backgroundColor);
