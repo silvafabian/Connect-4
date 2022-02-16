@@ -58,6 +58,7 @@ soundBtn.addEventListener('click', sound)
 
 /*-------------------------------- Functions--------------------------------*/
 // init()
+message.textContent = 'Press the Play button to get started!'
 
 function init() {
   board = 
@@ -143,10 +144,10 @@ function choiceToBottom(idx) {
 
 function checkTurn () {
   if (turn === 1) { 
-    message.textContent = "Player 1 is up!"
+    message.textContent = "Player 1 🔴 is up!"
   } 
   else if (turn === -1) {
-    message.textContent = "Player 2 is up!"
+    message.textContent = "Player 2 🟡 is up!"
   } 
 }
 
@@ -158,13 +159,13 @@ function getWinner() {
     const d = winningCombos[i][3]
   
     if(board[a] +board[b] + board[c] + board[d]=== 4){
-      message.textContent = "Player 1 wins!!!"
+      message.textContent = "Player 1 🔴 wins!!!"
       winner = 'R'
       confetti.start(3000)
       return
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
-      message.textContent = "Player 2 wins!!!"
+      message.textContent = "Player 2 🟡 wins!!!"
       winner = 'Y'
       confetti.start(3000)
       return
@@ -186,6 +187,7 @@ function reset() {
 function play() {  
   playBtn.hidden = true
   init()
+  message.textContent = "Player 1 🔴 is up!"
 }
 
 function theme() {
