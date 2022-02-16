@@ -43,6 +43,8 @@ const themeBtn = document.getElementById("theme")
 
 const soundBtn = document.getElementById("sound")
 
+const topRow = document.querySelectorAll('.click')
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -55,6 +57,10 @@ playBtn.addEventListener('click', play)
 themeBtn.addEventListener('click', theme)
 
 soundBtn.addEventListener('click', sound)
+
+topRow.forEach(circle => circle.addEventListener('mouseenter', colorOnMouseOver))
+
+topRow.forEach(circle => circle.addEventListener('mouseleave', colorOnMouseLeave))
 
 /*-------------------------------- Functions--------------------------------*/
 // init()
@@ -83,6 +89,8 @@ function init() {
 
 function render() {
   changeColorOnBoard() 
+  colorOnMouseOver()
+  colorOnMouseLeave()
 }
 
 function clickBoard(evt) {
@@ -121,7 +129,7 @@ function changeColorOnBoard() {
     else if (circle === -1) {
       boardArr[idx].style.backgroundColor = 'red'
     }
-    else {
+    else { 
       boardArr[idx].style.backgroundColor = 'white'
     }
   })
@@ -197,3 +205,19 @@ function theme() {
 function sound() {
   
 }
+
+function colorOnMouseOver(evt) {
+  // console.log(evt.target.style.backgroundColor);
+  if (turn === 1 && evt.target) {
+    evt.target.style.backgroundColor = 'red'
+  }
+  else if (turn === -1 && evt.target){
+    evt.target.style.backgroundColor = 'yellow'
+  }
+}
+
+function colorOnMouseLeave (evt) {
+  evt.target.style.backgroundColor = 'white'
+}
+
+// TODO look up toggle for this above
