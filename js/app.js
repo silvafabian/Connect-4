@@ -22,6 +22,7 @@ const winningCombos = [
   [7, 15, 23, 31], [15, 23, 31, 39], [23, 31, 39, 47],
   [8, 16, 24, 32], [16, 24, 32, 40], [48, 40, 32, 24],
   [9, 17, 25, 33], [17, 25, 33, 41], [10, 18, 26, 34],
+  [14, 22, 30, 38], [22, 30, 38, 46], [21, 29, 37, 45]
 ]
 
 /*-------------------------------- Variables --------------------------------*/
@@ -58,9 +59,9 @@ themeBtn.addEventListener('click', theme)
 
 soundBtn.addEventListener('click', sound)
 
-topRow.forEach(circle => circle.addEventListener('mouseenter', colorOnMouseOver))
+// topRow.forEach(circle => circle.addEventListener('mouseenter', colorOnMouseOver))
 
-topRow.forEach(circle => circle.addEventListener('mouseleave', colorOnMouseLeave))
+// topRow.forEach(circle => circle.addEventListener('mouseleave', colorOnMouseLeave))
 
 /*-------------------------------- Functions--------------------------------*/
 // init()
@@ -89,8 +90,8 @@ function init() {
 
 function render() {
   changeColorOnBoard() 
-  colorOnMouseOver()
-  colorOnMouseLeave()
+  // colorOnMouseOver()
+  // colorOnMouseLeave()
 }
 
 function clickBoard(evt) {
@@ -136,8 +137,8 @@ function changeColorOnBoard() {
 }
 
 // this function takes the user choice, loops through it, and then places it at the most low part of of the function.
-// it adds 35 to the index to reach the bottom row
-// as long as 1 is between 0 and 41 inclusive (the number of circles on the board)
+// it adds 42 to the index to reach the bottom row
+// as long as 1 is between 0 and 48 inclusive (the number of circles on the board)
 // it then subtracts 7 to get to the row right above it, all in the same vertical column
 // if the index value of the board is null, it return the value and then colors it according to the turn
 function choiceToBottom(idx) {
@@ -206,18 +207,18 @@ function sound() {
   
 }
 
-function colorOnMouseOver(evt) {
-  // console.log(evt.target.style.backgroundColor);
-  if (turn === 1 && evt.target) {
-    evt.target.style.backgroundColor = 'red'
-  }
-  else if (turn === -1 && evt.target){
-    evt.target.style.backgroundColor = 'yellow'
-  }
-}
+// function colorOnMouseOver(evt) {
+//   console.log(evt.target.style.backgroundColor);
+//   if (turn === 1 && evt.target) {
+//     evt.target.style.backgroundColor = 'red'
+//   }
+//   else if (turn === -1 && evt.target){
+//     evt.target.style.backgroundColor = 'yellow'
+//   }
+// }
 
-function colorOnMouseLeave (evt) {
-  evt.target.style.backgroundColor = 'white'
-}
+// function colorOnMouseLeave (evt) {
+//   evt.target.style.backgroundColor = 'white'
+// }
 
 // TODO look up toggle for this above
