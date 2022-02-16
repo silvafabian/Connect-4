@@ -41,6 +41,7 @@ body {
 
 .board {
   background-color: blue;
+  border-radius: 20px;
   border: 9px solid blue;
   margin: auto;
   display: grid;
@@ -58,6 +59,9 @@ body {
 
 .dont-click {
   pointer-events: none;
+}
+.click {
+  cursor: pointer;
 }
 
 /* .boarrd .click{

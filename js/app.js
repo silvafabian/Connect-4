@@ -40,7 +40,7 @@ const resetBtn = document.getElementById("reset")
 
 const playBtn = document.getElementById("play")
 
-const themeBtn = document.getElementById("theme")
+const lightDarkBtn = document.getElementById("light-dark-mode")
 
 const soundBtn = document.getElementById("sound")
 
@@ -55,7 +55,7 @@ resetBtn.addEventListener('click', reset)
 
 playBtn.addEventListener('click', play)
 
-themeBtn.addEventListener('click', theme)
+lightDarkBtn.addEventListener('click', lightDark)
 
 soundBtn.addEventListener('click', sound)
 
@@ -199,7 +199,7 @@ function play() {
   message.textContent = "Player 1 🔴 is up!"
 }
 
-function theme() {
+function lightDark() {
   
 }
 
