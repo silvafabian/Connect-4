@@ -59,9 +59,8 @@ lightDarkBtn.addEventListener('click', lightDark)
 
 soundBtn.addEventListener('click', sound)
 
-// topRow.forEach(circle => circle.addEventListener('mouseenter', colorOnMouseOver))
+// topRow.forEach(circle => circle.addEventListener('mouseover mouseout', colorOnMouseOver))
 
-// topRow.forEach(circle => circle.addEventListener('mouseleave', colorOnMouseLeave))
 
 /*-------------------------------- Functions--------------------------------*/
 // init()

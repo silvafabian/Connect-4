@@ -33,6 +33,10 @@ body {
   align-items: center;
 }
 
+h1 {
+  
+}
+
 .btn {
   font-size: 2.4rem;
   width: auto;
@@ -40,8 +44,9 @@ body {
 }
 
 .board {
-  background-color: blue;
-  border-radius: 20px;
+  background-image: url(../assets/blue.png);
+  background-size: cover;
+  border-radius: 0px;
   border: 9px solid blue;
   margin: auto;
   display: grid;
@@ -60,6 +65,7 @@ body {
 .dont-click {
   pointer-events: none;
 }
+
 .click {
   cursor: pointer;
 }
