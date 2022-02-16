@@ -44,7 +44,9 @@ const lightDarkBtn = document.getElementById("light-dark-mode")
 
 const soundBtn = document.getElementById("sound")
 
-const topRow = document.querySelectorAll('.click')
+const body = document.querySelector("body")
+
+// const topRow = document.querySelectorAll('.click')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -89,7 +91,7 @@ function init() {
 
 function render() {
   changeColorOnBoard() 
-  // colorOnMouseOver()
+  colorOnMouseOver()
   // colorOnMouseLeave()
 }
 
@@ -199,8 +201,20 @@ function play() {
 }
 
 function lightDark() {
-  
+  body.className = body.className === "dark" ? "" : "dark"
+  // console.log(lightDarkBtn);
 }
+
+function checkDarkPref() {
+  if (
+    window.matchMedia("(prefers-color-scheme:dark)").matches &&
+    body.className !== "dark"
+  ) {
+    lightDark()
+  }
+}
+
+checkDarkPref()
 
 function sound() {
   

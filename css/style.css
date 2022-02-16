@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: rgb(138,62,203);
+  background: rgb(138,62,203); 
   background: linear-gradient(228deg, rgba(138,62,203,1) 0%, rgba(254,181,1,1) 50%, rgba(92,229,231,1) 100%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -33,14 +33,10 @@ body {
   align-items: center;
 }
 
-h1 {
-  
-}
-
 .btn {
   font-size: 2.4rem;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 50px;
 }
 
 .board {
@@ -69,6 +65,14 @@ h1 {
 .click {
   cursor: pointer;
 }
+
+/* #light-dark-button {
+  
+}
+
+#light-dark-button::after {
+
+} */
 
 /* .boarrd .click{
   width: 101.3px;
