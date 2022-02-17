@@ -246,21 +246,21 @@ function playEmptyBoardSound(){
 
 
 
-// function lightDark() {
-//   body.className = body.className === "dark" ? "" : "dark"
-//   // console.log(lightDarkBtn);
-// }
+function lightDark() {
+  body.className = body.className === "dark" ? "" : "dark"
+  // console.log(lightDarkBtn);
+}
 
-// function checkDarkPref() {
-//   if (
-//     window.matchMedia("(prefers-color-scheme:dark)").matches &&
-//     body.className !== "dark"
-//   ) {
-//     lightDark()
-//   }
-// }
+function checkDarkPref() {
+  if (
+    window.matchMedia("(prefers-color-scheme:dark)").matches &&
+    body.className !== "dark"
+  ) {
+    lightDark()
+  }
+}
 
-// checkDarkPref()
+checkDarkPref()
 
 // function sound() {
   

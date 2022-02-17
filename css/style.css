@@ -35,15 +35,15 @@ body {
   color: whitesmoke;
 }
 
-.animate__animated.animate__pulse {
-  --animate-duration: ;
-}
-
 .btn {
   font-size: 2.4rem;
   width: 120px;
   height: 50px;
 }
+
+/* .btn:hover {
+  background-color: aqua;
+} */
 
 .board {
   background-image: url(../assets/blue.png);
@@ -71,24 +71,3 @@ body {
 .click {
   cursor: pointer;
 }
-
-/* #light-dark-button {
-  
-}
-
-#light-dark-button::after {
-
-} */
-
-/* .boarrd .click{
-  width: 101.3px;
-  height: 101.3px;
-  margin: 0 1.5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-} */
-
-/* .board:hover {
-  cursor: not-allowed;
-} */
