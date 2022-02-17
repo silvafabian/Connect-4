@@ -29,7 +29,6 @@ const winningCombos = [
 
 let board, turn, winner, numOfTurns
 
-
 /*------------------------ Cached Element References ------------------------*/
 
 const boardArr = document.querySelectorAll(".circle")
@@ -40,14 +39,17 @@ const resetBtn = document.getElementById("reset")
 
 const playBtn = document.getElementById("play")
 
-// const lightDarkBtn = document.getElementById("light-dark-mode")
-
 const soundBtn = document.getElementById("sound")
+
+const chipSound = new Audio('../audio/chip-sound.wav')
+
+const emptyBoardSound = new Audio('../audio/empty-board.wav')
+
+// const lightDarkBtn = document.getElementById("light-dark-mode")
 
 // const body = document.querySelector("body")
 
 // const topRow = document.querySelectorAll('.click')
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -57,16 +59,20 @@ resetBtn.addEventListener('click', reset)
 
 playBtn.addEventListener('click', play)
 
-lightDarkBtn.addEventListener('click', lightDark)
+soundBtn.addEventListener('click', toggleSound)
 
-soundBtn.addEventListener('click', sound)
+// lightDarkBtn.addEventListener('click', lightDark)
 
 // topRow.forEach(circle => circle.addEventListener('mouseover mouseout', colorOnMouseOver))
 
-
 /*-------------------------------- Functions--------------------------------*/
-// init()
 message.textContent = 'Press the Play button to get started!'
+
+function play() {  
+  playBtn.hidden = true
+  init()
+  message.textContent = "Player 1 🔴 is up!"
+}
 
 function init() {
   board = 
@@ -118,7 +124,13 @@ function clickBoard(evt) {
   
   resetBtn.removeAttribute('hidden')
 
+  if(soundBtn.classList.contains('on')) {
+    playChipSound()
+  }
+  
+
   render()
+
   getWinner()
 }
 
@@ -191,14 +203,48 @@ function getWinner() {
 function reset() {
   resetBtn.hidden = true
   playBtn.hidden = false
-  init()
+  if(soundBtn.classList.contains('on')) {
+    playEmptyBoardSound()
+  }
+  setTimeout(init(), 2000)
 }
 
-function play() {  
-  playBtn.hidden = true
-  init()
-  message.textContent = "Player 1 🔴 is up!"
+function toggleSound() {
+  soundBtn.classList.toggle("on") 
+  if (soundBtn.classList.contains('on')) {
+    soundBtn.textContent = 'Sound 🔊'
+  }
+  else {
+    soundBtn.textContent = 'Sound 🔇'
+  }
 }
+
+function playChipSound(){ 
+  chipSound.volume = .5
+  chipSound.play()
+}
+
+function playEmptyBoardSound(){ 
+  emptyBoardSound.volume = .5
+  emptyBoardSound.play()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function lightDark() {
 //   body.className = body.className === "dark" ? "" : "dark"
