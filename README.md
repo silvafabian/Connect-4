@@ -27,7 +27,7 @@ GOAL: The goal of the game is to get four of your player chips in a row first. T
 Technologies Used:
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 
@@ -56,3 +56,7 @@ Icebox Features:
 - Add timed rounds for a fast 
 
 --------
+
+credits:
+background image by Carl Raw from https://unsplash.com/photos/8Gdayy2Lhi0
+sound effects from boosmyller from https://freesound.org/people/boosmyller/sounds/447529/
