@@ -45,12 +45,6 @@ const chipSound = new Audio('../audio/chip-sound.wav')
 
 const emptyBoardSound = new Audio('../audio/empty-board.wav')
 
-// const lightDarkBtn = document.getElementById("light-dark-mode")
-
-// const body = document.querySelector("body")
-
-// const topRow = document.querySelectorAll('.click')
-
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
@@ -61,16 +55,12 @@ playBtn.addEventListener('click', play)
 
 soundBtn.addEventListener('click', toggleSound)
 
-// lightDarkBtn.addEventListener('click', lightDark)
-
-// topRow.forEach(circle => circle.addEventListener('mouseover mouseout', colorOnMouseOver))
-
 /*-------------------------------- Functions--------------------------------*/
 message.textContent = 'Press the Play button to get started!'
 
-function play() {  
+function play() {
+  init() 
   playBtn.hidden = true
-  init()
   message.textContent = "Player 1 🔴 is up!"
 }
 
@@ -91,14 +81,12 @@ function init() {
   numOfTurns = 0
   playing = false
   message.textContent = 'Press the Play button to get started!'
-
+  
   render()
 }
 
 function render() {
   changeColorOnBoard() 
-  // colorOnMouseOver()
-  // colorOnMouseLeave()
 }
 
 function clickBoard(evt) {
@@ -127,7 +115,6 @@ function clickBoard(evt) {
   if(soundBtn.classList.contains('on')) {
     playChipSound()
   }
-  
 
   render()
 
@@ -162,7 +149,6 @@ function choiceToBottom(idx) {
     
   }
 }
-
 
 function checkTurn () {
   if (turn === 1) { 
