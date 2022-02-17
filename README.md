@@ -7,7 +7,7 @@
 
 ## Getting Started:
 
- ### Click <a href="fabian-connect-4.surge.sh" target="_blank">Connect 4</a> to open the link in a new tab.
+ ### Click <a href="https://fabian-connect-4.surge.sh" target="_blank">Connect 4</a> to open the link in a new tab.
 
 GOAL: The goal of the game is to get four of your player chips in a row first. They can either be placed in a row vertically, horizontally, or diagonally.
 
