@@ -167,13 +167,13 @@ function getWinner() {
     const d = winningCombos[i][3]
   
     if(board[a] +board[b] + board[c] + board[d]=== 4){
-      message.textContent = "Player 1 🔴 wins!!!"
+      message.textContent = "Player 2 🟡 wins!!!"
       winner = 'R'
       confetti.start(3000)
       return
     }
     else if (board[a] +board[b] + board[c] + board[d]=== -4){
-      message.textContent = "Player 2 🟡 wins!!!"
+      message.textContent = "Player 1 🔴 wins!!!"
       winner = 'Y'
       confetti.start(3000)
       return
