@@ -57,6 +57,6 @@ Icebox Features:
 
 --------
 
-credits:
-background image by Carl Raw from https://unsplash.com/photos/8Gdayy2Lhi0
-sound effects from boosmyller from https://freesound.org/people/boosmyller/sounds/447529/
+* Credits
+  * background image by Carl Raw from https://unsplash.com/photos/8Gdayy2Lhi0
+  * sound effects from boosmyller from https://freesound.org/people/boosmyller/sounds/447529/
