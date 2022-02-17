@@ -12,7 +12,7 @@
 GOAL: The goal of the game is to get four of your player chips in a row first. They can either be placed in a row vertically, horizontally, or diagonally.
 
 - To get started, simply hit the play button!
-- The only clickable area on the board will be the top row itself.
+- **The only clickable area on the board will be the top row itself.**
   - This is to prevent the players from being able to cheat and place the chips anywhere they'd like!
 - Turns will rotate automatically and dispaly a message based one whose turn it currently is.
 - The first player to math up 4 chips in a row, column, or diagonally wins!
@@ -25,3 +25,13 @@ GOAL: The goal of the game is to get four of your player chips in a row first. T
 
 -------
 # Screenshots of gameplay
+<figure>
+  <figcaption> Upon loading into the game</figcaption>
+  <img src="https://i.imgur.com/5hLxoQ6.png" alt="Italian Trulli" width="500" height="450">
+  <figcaption> Gameplay </figcaption>
+  <img src="https://i.imgur.com/R4idvlk.png" alt="Italian Trulli" width="500" height="">
+  <figcaption> Winner </figcaption>
+  <img src="https://i.imgur.com/CeyNuMK.png" alt="Italian Trulli" width="500" height="">
+</figure>
+
+-------
