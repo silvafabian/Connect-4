@@ -19,6 +19,8 @@ html {
 
 body {
   background-image: url(../assets/game-background.jpg);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
   background-size: cover;
   backdrop-filter: blur(7px);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -35,11 +37,19 @@ body {
   color: whitesmoke;
 }
 
+.header-btns, .greeting {
+  position: relative;
+  top: 100px;
+}
+
 .btn {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   width: 120px;
   height: 50px;
+  transform: scale(0.8);
 }
+
+
 
 /* .btn:hover {
   background-color: aqua;
@@ -70,4 +80,10 @@ body {
 
 .click {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-btns, .greeting {
+    top: auto;
+  }
 }
