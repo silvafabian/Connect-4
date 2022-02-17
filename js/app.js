@@ -55,6 +55,8 @@ playBtn.addEventListener('click', play)
 
 soundBtn.addEventListener('click', toggleSound)
 
+darkBtn.addEventListener('click', toggleDarkLight)
+
 /*-------------------------------- Functions--------------------------------*/
 message.textContent = 'Press the Play button to get started!'
 
@@ -97,7 +99,7 @@ function clickBoard(evt) {
   if (winner || board[idxCircle] === -1 || board[idxCircle] ===1) {
     return
   }
-  //TODO SHOW OFF THIS CODE FOR PRESENTATION
+
   if (actualIdx <= 6) {
     return
   }
@@ -146,7 +148,6 @@ function choiceToBottom(idx) {
     if (board[i] === null) {
       return i
     }
-    
   }
 }
 
@@ -192,7 +193,11 @@ function reset() {
   if(soundBtn.classList.contains('on')) {
     playEmptyBoardSound()
   }
-  setTimeout(init(), 2000)
+  setTimeout(window.location.reload.bind(window.location), 2000)
+}
+
+function toggleDarkLight() {
+
 }
 
 function toggleSound() {
@@ -206,7 +211,7 @@ function toggleSound() {
 }
 
 function playChipSound(){ 
-  chipSound.volume = .5
+  chipSound.volume = .8
   chipSound.play()
 }
 

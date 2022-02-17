@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-image: url(../assets/game-background.jpg);
+  background-image: url(../assets/game-background-light.jpg);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
   background-size: cover;
@@ -34,7 +34,15 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: lightsalmon;
+}
+
+.body-dark {
+  background-image: url(../assets/game-background-dark.jpg);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  background-size: cover;
+
 }
 
 .header-btns, .greeting {
@@ -47,6 +55,11 @@ body {
   width: 130px;
   height: 50px;
   transform: scale(0.8);
+}
+
+.btn:hover {
+  color: black;
+  background-color: cadetblue;
 }
 
 .board {
@@ -75,6 +88,11 @@ body {
 
 .click {
   cursor: pointer;
+  transition: .2s
+}
+
+.click:hover {
+  background-color: rgb(113, 211, 43) !important;
 }
 
 @media only screen and (min-width: 768px) {
