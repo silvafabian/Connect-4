@@ -47,7 +47,7 @@ Technologies Used:
 
 -------
 
-Next Steps:
+Icebox Features:
 
 - Implement a difficulty button to change the game aspect.
 - Add a "vs computer" button so it can be a single player game.
