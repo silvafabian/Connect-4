@@ -24,6 +24,17 @@ GOAL: The goal of the game is to get four of your player chips in a row first. T
   - To disbale the sound button, just press the button once more and there will be no sound.
 
 -------
+Technologies Used:
+
+<img src="https://img.shields.io/badge/-JavaScript-yellow">
+<img src="https://img.shields.io/badge/-HTML-red">
+<img src="https://img.shields.io/badge/-CSS-blue">
+<img src="https://img.shields.io/badge/-Bootstrap-lightgrey">
+
+
+
+
+-------
 # Screenshots of gameplay
 <figure>
   <figcaption> Upon loading into the game</figcaption>
@@ -35,3 +46,4 @@ GOAL: The goal of the game is to get four of your player chips in a row first. T
 </figure>
 
 -------
+
