@@ -30,6 +30,7 @@ Technologies Used:
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabiansilva&theme=blue-green">
 
 
 
@@ -38,11 +39,11 @@ Technologies Used:
 # Screenshots of gameplay
 <figure>
   <figcaption> Upon loading into the game</figcaption>
-  <img src="https://i.imgur.com/5hLxoQ6.png" alt="Italian Trulli" width="500" height="450">
+  <img src="https://i.imgur.com/m2FIjNN.png" width="500" height="">
   <figcaption> Gameplay </figcaption>
-  <img src="https://i.imgur.com/R4idvlk.png" alt="Italian Trulli" width="500" height="">
-  <figcaption> Winner </figcaption>
-  <img src="https://i.imgur.com/CeyNuMK.png" alt="Italian Trulli" width="500" height="">
+  <img src="https://i.imgur.com/0RgZyD0.png" width="500" height="">
+  <figcaption> Darkmode </figcaption>
+  <img src="https://i.imgur.com/Wixoo4T.png" width="500" height="">
 </figure>
 
 -------
@@ -59,4 +60,5 @@ Icebox Features:
 
 * Credits
   * background image by Carl Raw from https://unsplash.com/photos/8Gdayy2Lhi0
+  * background image by Andrey Metelev from https://unsplash.com/photos/DEuansgqjns
   * sound effects from boosmyller from https://freesound.org/people/boosmyller/sounds/447529/
