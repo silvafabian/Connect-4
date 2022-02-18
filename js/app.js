@@ -94,6 +94,7 @@ function init() {
   playing = false
   
   render()
+  
 }
 
 function render() {
@@ -223,15 +224,16 @@ function playEmptyBoardSound(){
 }
 
 function toggleDarkLight() {
-  console.log('helo');
+  
   if (darkBtn.textContent === 'Dark'){
-    console.log(bodyColor);
     bodyColor.style.backgroundImage = 'url(../assets/game-background-dark.jpg)'
     boardColor.style.backgroundImage = 'url(../assets/grey.png)'
     document.querySelector('.title').style.color = 'white'
     
     for (let i = 7; i < circleColor.length; i++) {
-      circleColor[i].style.backgroundColor = 'dimGrey'
+      if (board[i] === null){
+        circleColor[i].style.backgroundColor = 'dimGrey'
+      }
     }
 
     darkBtn.textContent = 'Light'
@@ -242,7 +244,9 @@ function toggleDarkLight() {
     document.querySelector('.title').style.color = 'black'
     
     for (let i = 7; i < circleColor.length; i++) {
-      circleColor[i].style.backgroundColor = 'white'
+      if (board[i] === null){
+        circleColor[i].style.backgroundColor = 'white'
+      }
     }
 
     darkBtn.textContent = 'Dark'
