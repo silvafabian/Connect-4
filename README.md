@@ -15,7 +15,7 @@ GOAL: The goal of the game is to get four of your player chips in a row first. T
 - **The only clickable area on the board will be the top row itself.**
   - This is to prevent the players from being able to cheat and place the chips anywhere they'd like!
 - Turns will rotate automatically and dispaly a message based one whose turn it currently is.
-- The first player to math up 4 chips in a row, column, or diagonally wins!
+- The first player to match up 4 chips in a row, column, or diagonally wins!
 - To reset the game board and play again, simply hit the 'reset' button at any point during the game or after a win.
   - The 'reset' button will remain hidden up until the first play is made.
 - There is an optional 'sound' button at the top next the the 'dark/light' button.
