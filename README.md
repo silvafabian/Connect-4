@@ -58,6 +58,7 @@ Icebox Features:
 --------
 
 * Credits
+  * Animations from https://animate.style/
   * background image by Carl Raw from https://unsplash.com/photos/8Gdayy2Lhi0
   * background image by Andrey Metelev from https://unsplash.com/photos/DEuansgqjns
   * sound effects from boosmyller from https://freesound.org/people/boosmyller/sounds/447529/
