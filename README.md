@@ -53,7 +53,7 @@ Icebox Features:
 - Add a "vs computer" button so it can be a single player game.
 - Eliminate top row and replacing with an interactive mouseover/mouseleave event.
 - Add theme button to change the background and board.
-- Add timed rounds for a fast 
+- Add timed rounds for a fast paced game.
 
 --------
 
