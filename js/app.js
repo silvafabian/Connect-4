@@ -45,6 +45,14 @@ const chipSound = new Audio('../audio/chip-sound.wav')
 
 const emptyBoardSound = new Audio('../audio/empty-board.wav')
 
+const darkBtn = document.getElementById('light-dark-mode')
+
+const bodyColor = document.querySelector("body")
+
+const boardColor = document.querySelector(".board")
+
+const circleColor = document.querySelectorAll(".circle")
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 boardArr.forEach(circle => circle.addEventListener('click', clickBoard))
@@ -59,6 +67,8 @@ darkBtn.addEventListener('click', toggleDarkLight)
 
 /*-------------------------------- Functions--------------------------------*/
 message.textContent = 'Press the Play button to get started!'
+
+checkDarkPref()
 
 function play() {
   init() 
@@ -82,7 +92,6 @@ function init() {
   winner = null
   numOfTurns = 0
   playing = false
-  message.textContent = 'Press the Play button to get started!'
   
   render()
 }
@@ -132,9 +141,9 @@ function changeColorOnBoard() {
     else if (circle === -1) {
       boardArr[idx].style.backgroundColor = 'red'
     }
-    else { 
-      boardArr[idx].style.backgroundColor = 'white'
-    }
+    // else { 
+    //   boardArr[idx].style.backgroundColor = 'white'
+    // }
   })
 }
 
@@ -196,10 +205,6 @@ function reset() {
   setTimeout(window.location.reload.bind(window.location), 2000)
 }
 
-function toggleDarkLight() {
-
-}
-
 function toggleSound() {
   soundBtn.classList.toggle("on") 
   if (soundBtn.classList.contains('on')) {
@@ -218,4 +223,41 @@ function playChipSound(){
 function playEmptyBoardSound(){ 
   emptyBoardSound.volume = .5
   emptyBoardSound.play()
+}
+
+function toggleDarkLight() {
+  console.log('helo');
+  if (darkBtn.textContent === 'Dark'){
+    console.log(bodyColor);
+    bodyColor.style.backgroundImage = 'url(../assets/game-background-dark.jpg)'
+    boardColor.style.backgroundImage = 'url(../assets/grey.png)'
+    document.querySelector('.title').style.color = 'white'
+    
+    for (let i = 7; i < circleColor.length; i++) {
+      circleColor[i].style.backgroundColor = 'dimGrey'
+    }
+
+    darkBtn.textContent = 'Light'
+  }
+  else if (darkBtn.textContent === 'Light') {
+    bodyColor.style.backgroundImage = 'url(../assets/game-background-light.jpg)'
+    boardColor.style.backgroundImage = 'url(../assets/blue.png)'
+    document.querySelector('.title').style.color = 'black'
+    
+    for (let i = 7; i < circleColor.length; i++) {
+      circleColor[i].style.backgroundColor = 'white'
+    }
+
+    darkBtn.textContent = 'Dark'
+  }
+
+}
+
+function checkDarkPref() {
+  if (
+    window.matchMedia("(prefers-color-scheme:dark)").matches &&
+    bodyColor.className !== "dark"
+  ) {
+    toggleDarkLight()
+  }
 }
