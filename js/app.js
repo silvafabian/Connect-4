@@ -141,9 +141,6 @@ function changeColorOnBoard() {
     else if (circle === -1) {
       boardArr[idx].style.backgroundColor = 'red'
     }
-    // else { 
-    //   boardArr[idx].style.backgroundColor = 'white'
-    // }
   })
 }
 
