@@ -231,9 +231,7 @@ function toggleDarkLight() {
     document.querySelector('.title').style.color = 'white'
     
     for (let i = 7; i < circleColor.length; i++) {
-      if (board[i] === null){
-        circleColor[i].style.backgroundColor = 'dimGrey'
-      }
+      circleColor[i].style.backgroundColor = 'dimGrey'
     }
 
     darkBtn.textContent = 'Light'
@@ -244,9 +242,7 @@ function toggleDarkLight() {
     document.querySelector('.title').style.color = 'black'
     
     for (let i = 7; i < circleColor.length; i++) {
-      if (board[i] === null){
-        circleColor[i].style.backgroundColor = 'white'
-      }
+      circleColor[i].style.backgroundColor = 'white'
     }
 
     darkBtn.textContent = 'Dark'
